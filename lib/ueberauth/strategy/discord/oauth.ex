@@ -55,7 +55,7 @@ defmodule Ueberauth.Strategy.Discord.OAuth do
 		OAuth2.Strategy.AuthCode.authorize_url(client, params)
 	end
 
-	def get_token(client, params) do
+	def get_token(client, params, headers) do
 		client
 		|> put_header("Accept", "application/json")
 		|> OAuth2.Strategy.AuthCode.get_token(params, headers)

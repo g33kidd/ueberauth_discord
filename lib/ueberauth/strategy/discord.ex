@@ -16,7 +16,7 @@ defmodule Ueberauth.Strategy.Discord do
 
   To customize the scope (permissions) that are requested by github include them as part of your url:
 
-      "/auth/github?scope=user,public_repo,gist"
+      "/auth/discord?scope=identify+email"
 
   You can also include a `state` param that github will return to you.
   """
