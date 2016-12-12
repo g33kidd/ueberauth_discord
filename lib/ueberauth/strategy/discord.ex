@@ -92,13 +92,17 @@ defmodule Ueberauth.Strategy.Discord do
     user = conn.private.discord_user
 
     %Info{
-    	id: user["id"],
-    	username: user["username"],
-    	discriminator: user["discriminator"],
-    	avatar: user["avatar"],
-    	verified: user["verified"],
-    	email: user["email"],
-    	mfa_enabled: user["mfa_enabled"]
+      email: user["email"],
+      name: user["username"],
+      nickname: user["discriminator"],
+      image: user["avatar"]
+    	# id: user["id"],
+    	# username: user["username"],
+    	# discriminator: user["discriminator"],
+    	# avatar: user["avatar"],
+    	# verified: user["verified"],
+    	# email: user["email"],
+    	# mfa_enabled: user["mfa_enabled"]
     }
   end
 
